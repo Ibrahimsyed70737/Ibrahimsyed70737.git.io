@@ -71,9 +71,16 @@
                 box-shadow: 0 8px 20px rgba(0,0,0,0.1);
             }
             #mobile-menu .nav-link {
-                width: 90%;
+                width: 90%; /* Make links take up more width for easier tapping */
                 text-align: center;
-                margin: 0.5rem 0;
+                margin: 0.5rem 0; /* Add vertical spacing between links */
+                padding: 0.75rem 1rem; /* Increase padding for better touch target */
+                border-radius: 0.5rem; /* Add rounded corners */
+                /* Ensure active state is visible on mobile too */
+                &.active {
+                    background-color: #eef2ff; /* Indigo 50 */
+                    color: #4f46e5; /* Indigo 600 */
+                }
             }
         }
         @media (min-width: 769px) {
